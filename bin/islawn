@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /usr/bin/env node --experimental-modules "$(cd "$(dirname $0)/.."; pwd)/src/slawn-interactive-cli.mjs"
