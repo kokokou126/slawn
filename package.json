@@ -2,7 +2,7 @@
   "name": "slawn",
   "version": "0.0.1",
   "description": "A programming language made with JavaScript",
-  "main": "index.js",
+  "main": "src/slawn.mjs",
   "scripts": {
     "clean": "rm -rf ./docs/",
     "doc": "jsdoc -c ./jsdoc.json",
@@ -10,8 +10,16 @@
     "minify": "scripts/minify.sh",
     "test": "node --experimental-modules tests/test.mjs"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kokokou126/slawn.git"
+  },
+  "author": "kokokou126 <kokokou126@gmail.com> (https://github.com/kokokou126)",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kokokou126/slawn/issues"
+  },
+  "homepage": "https://github.com/kokokou126/slawn#readme",
   "devDependencies": {
     "chalk": "^4.0.0",
     "eslint": "^6.8.0",
