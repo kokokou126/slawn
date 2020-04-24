@@ -1,0 +1,1 @@
+const powerOperator={arg:2,body:(o,r)=>r**o};

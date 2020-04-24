@@ -1,0 +1,1 @@
+const rangeOperator={arg:2,body:(r,a)=>[...Array(r-a+1).keys()].map(r=>r+a)};export default rangeOperator;

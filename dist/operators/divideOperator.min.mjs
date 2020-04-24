@@ -1,0 +1,1 @@
+const divideOperator={arg:2,body:(d,e)=>e/d};export default divideOperator;

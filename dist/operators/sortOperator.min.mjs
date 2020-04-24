@@ -1,0 +1,1 @@
+const sortOperator={arg:1,body:r=>[...r].sort()};export default sortOperator;

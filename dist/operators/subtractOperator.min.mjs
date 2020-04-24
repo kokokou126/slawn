@@ -1,0 +1,1 @@
+const subtractOperator={arg:2,body:(t,r)=>r-t};export default subtractOperator;

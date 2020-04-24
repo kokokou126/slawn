@@ -1,0 +1,1 @@
+const notEqualOperator={arg:2,body:(o,t)=>t!==o};export default notEqualOperator;

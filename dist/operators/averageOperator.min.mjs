@@ -1,0 +1,1 @@
+const averageOperator={arg:1,body:e=>e.reduce((e,r)=>e+r)/e.length};export default averageOperator;

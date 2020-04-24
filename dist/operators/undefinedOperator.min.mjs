@@ -1,0 +1,1 @@
+const undefinedOperator={arg:0,body:()=>void 0};export default undefinedOperator;

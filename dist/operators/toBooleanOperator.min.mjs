@@ -1,0 +1,1 @@
+const toBooleanOperator={arg:1,body:o=>!!o};export default toBooleanOperator;

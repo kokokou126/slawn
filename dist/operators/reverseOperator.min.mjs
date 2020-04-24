@@ -1,0 +1,1 @@
+const reverseOperator={arg:1,body:e=>[...e].reverse()};export default reverseOperator;

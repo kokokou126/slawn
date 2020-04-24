@@ -1,0 +1,1 @@
+const toArrayOperator={arg:1,body:r=>[r]};export default toArrayOperator;

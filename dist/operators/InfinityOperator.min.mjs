@@ -1,0 +1,1 @@
+const InfinityOperator={arg:0,body:()=>1/0};export default InfinityOperator;

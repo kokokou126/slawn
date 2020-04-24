@@ -1,0 +1,1 @@
+import Slawn from"./slawn.mjs";import readline from"readline";const prompt=readline.createInterface({input:process.stdin,output:process.stdout}),slawn=new Slawn,asyncPrompt=()=>{prompt.question("slawn> ",e=>{if("exit"===e)prompt.close();else{try{slawn.eval(JSON.parse(e))}catch(e){console.error(e)}asyncPrompt()}})};asyncPrompt();

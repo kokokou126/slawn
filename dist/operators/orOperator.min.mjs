@@ -1,0 +1,1 @@
+const orOperator={arg:2,body:(r,o)=>o||r};export default orOperator;

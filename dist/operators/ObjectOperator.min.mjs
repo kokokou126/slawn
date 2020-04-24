@@ -1,0 +1,1 @@
+const objectOperator={arg:0,body:()=>{}};export default objectOperator;
