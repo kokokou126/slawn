@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '12'
+deploy:
+  provider: npm
+  email: kokokou126@gmail.com
+  api_key:
+    secure: FcmG3qGbSkFiYouRagIroDlGQoQuTBzC4jgkSIJs7BbNS/LAO0vmUlPyR6tV6rHvsb81ycSsrdjth+q2TG4YxS5uUwzfh1kRikXcW9ZiX7SR8133OY++FfM7rF6gR9aW1ZlEtqsDKl1EhLeSJan49CjnheGkcsBfroaJwPVzLWtmdaNbA3xT582Rm4OVlcCr4Rp5c0ob4+k70xjGKLd+/eHyJ1sCIGNlFmGJWkmYsSFifNrg1F38kYjyFX86ze78ykfhKGofUYkiDIJVT1AihmBBvX2hgfVDQsDmAP25XJ9ToSJebxNZZDAsvpwoO+CAeXqv1ugbLDSKaH6Rbby7uVQJTsvoBU7uhTu1kYAhiTTO0if1ZramOd7gqivq5E4l4tBuOajH6wRq4UWSNafb7zHbZhSLAwcx6ktPfqGo3vToy2OK9ngiB75tXTs+j/wexxjlz0WkXIPsc46BOQOIYBr8y63RgyQwAgPEiGW1MUW8/7l9i67eTsaXNrb/WutDVvi2AjpoMVyrK0BtUENglGfbJDzfyKEuwRkXTrbA3UAFqVFQE4oiOfkwGNMJcxIL3QGRd4DWYEXvPONv+nbqEZIVoPRA5duDZDhhqL6+s1Ntwv2HXhrG/C8CrzPV6vbThGpWEg06bQa46Od0zLINih4cw+2Dq920cVyy/bsu1aU=
+  on:
+    tags: true
+    repo: kokokou126/slawn
