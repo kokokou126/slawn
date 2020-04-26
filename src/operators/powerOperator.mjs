@@ -19,3 +19,5 @@ const powerOperator = {
    */
   body: (p1, p2) => p2 ** p1
 }
+
+export default powerOperator
