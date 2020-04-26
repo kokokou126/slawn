@@ -455,6 +455,25 @@ class Engine {
   }
 
   /**
+   * 名前空間にキーを指定して値を代入します
+   * @param {string} key
+   * @param {any} value
+   * @returns {void}
+   */
+  setVariable (key, value) {
+    this.namespace.set(key, value)
+  }
+
+  /**
+   * 名前空間から指定したキーから値を取得し返します
+   * @param {string} key
+   * @return {any}
+   */
+  getVariable (key) {
+    return this.namespace.get(key)
+  }
+
+  /**
    * Slawn 式を評価します
    * @param {Expression} expression - Slawn 式
    * @returns {Object} - スタックを返します
