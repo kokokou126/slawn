@@ -12,12 +12,18 @@ shell.ls(`${__dirname}/*.test.mjs`).forEach(file => {
     const slawn = new Slawn()
     slawn.eval([
       ...data.default.target, '!toArray', '!toJSON', data.default.toBe, '!toArray', '!toJSON', '==', [
+        'result', '$true', '=',
         chalk`{green.bold PASSED} ${file}`, '!print'
       ], [
+        'result', '$false', '=',
         chalk`{red.bold FAILED} ${file}`, '!print',
         'stack', '$', '!print'
       ], '!if'
     ])
+
+    if (!slawn.getVariable('result')) {
+      shell.exit(1)
+    }
   })
   .catch(error => {
     console.error(error)
