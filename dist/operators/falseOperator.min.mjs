@@ -1,1 +1,0 @@
-const falseOperator={arg:0,body:()=>!1};export default falseOperator;

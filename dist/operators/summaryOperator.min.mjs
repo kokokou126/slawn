@@ -1,1 +1,0 @@
-const summaryOperator={arg:1,body:r=>r.reduce((r,a)=>r+a)};export default summaryOperator;

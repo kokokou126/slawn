@@ -1,1 +1,0 @@
-const modOperator={arg:2,body:(o,r)=>r%o};export default modOperator;

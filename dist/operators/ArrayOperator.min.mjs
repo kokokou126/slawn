@@ -1,1 +1,0 @@
-const ArrayOperator={arg:0,body:()=>[]};export default ArrayOperator;

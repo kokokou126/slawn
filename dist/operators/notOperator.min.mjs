@@ -1,1 +1,0 @@
-const notOperator={arg:1,body:o=>!o};export default notOperator;

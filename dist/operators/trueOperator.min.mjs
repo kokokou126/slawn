@@ -1,1 +1,0 @@
-const trueOperator={arg:0,body:()=>!0};export default trueOperator;

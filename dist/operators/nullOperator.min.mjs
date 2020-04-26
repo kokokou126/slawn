@@ -1,1 +1,0 @@
-const nullOperator={arg:0,body:()=>null};export default nullOperator;

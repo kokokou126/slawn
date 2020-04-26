@@ -1,1 +1,0 @@
-const greaterEqualOperator={arg:2,body:(r,a)=>a>=r};export default greaterEqualOperator;

@@ -1,1 +1,0 @@
-const printOperator={arg:1,body:o=>(console.log(o),null)};export default printOperator;

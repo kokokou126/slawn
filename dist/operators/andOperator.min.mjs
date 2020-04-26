@@ -1,1 +1,0 @@
-const andOperator={arg:2,body:(a,r)=>r&&a};export default andOperator;

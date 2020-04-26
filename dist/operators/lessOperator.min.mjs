@@ -1,1 +1,0 @@
-const lessOperator={arg:2,body:(e,r)=>r<e};export default lessOperator;

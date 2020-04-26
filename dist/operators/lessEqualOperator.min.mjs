@@ -1,1 +1,0 @@
-const lessEqualOperator={arg:2,body:(a,e)=>e<=a};export default lessEqualOperator;

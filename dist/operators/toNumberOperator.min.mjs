@@ -1,1 +1,0 @@
-const toNumberOperator={arg:1,body:r=>parseInt(r)};export default toNumberOperator;

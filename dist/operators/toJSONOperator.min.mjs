@@ -1,1 +1,0 @@
-const toJSONOperator={arg:1,body:t=>JSON.stringify(t)};export default toJSONOperator;

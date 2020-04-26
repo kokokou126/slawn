@@ -1,1 +1,0 @@
-const addOperator={arg:2,body:(a,d)=>d+a};export default addOperator;

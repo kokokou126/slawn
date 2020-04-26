@@ -1,1 +1,0 @@
-const NaNOperator={arg:0,body:()=>NaN};export default NaNOperator;
