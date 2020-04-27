@@ -4,7 +4,7 @@
   "description": "A programming language made with JavaScript",
   "main": "src/slawn.mjs",
   "scripts": {
-    "build": "bash scripts/build.sh",
+    "build": "node --experimental-modules scripts/build.mjs",
     "clean": "rm -rf ./docs/",
     "doc": "jsdoc -c ./jsdoc.json",
     "lint": "eslint --ext js,mjs src/",
