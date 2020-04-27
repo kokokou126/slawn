@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-shell.ls(`${__dirname}/../src/*.test.mjs`).forEach(file => {
+shell.ls(`${__dirname}/../test/*.test.mjs`).forEach(file => {
   import(file)
   .then(data => {
     const slawn = new Slawn()
