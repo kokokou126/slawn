@@ -6,8 +6,8 @@
   "scripts": {
     "clean": "rm -rf ./docs/",
     "doc": "jsdoc -c ./jsdoc.json",
-    "install": "node --experimental-modules scripts/install.mjs",
     "lint": "eslint --ext js,mjs src/",
+    "prepublish": "node --experimental-modules scripts/prepublish.mjs",
     "test": "node --experimental-modules scripts/test.mjs"
   },
   "repository": {
