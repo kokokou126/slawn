@@ -43,7 +43,7 @@ shell
       shell.ShellString(result.code)
         .toEnd(`dist/${outFileName}`)
         && shell.echo(chalk`{cyan.bold MINIFIED} src/${f}.mjs -> dist/${outFileName}`)
-      shell.sed('-i', /\.mjs"/g, '.js"', `dist/${outFileName}`)
+      shell.sed('-i', /\.mjs"/g, '.min.js"', `dist/${outFileName}`)
         && shell.echo(chalk`{blue.bold PROCESSED} dist/${outFileName}`)
     } else {
       shell.echo(chalk`{red.bold ERROR} dist/${f}.mjs
