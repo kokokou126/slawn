@@ -21,7 +21,38 @@ A programming language made with JavaScript
 
 ### With browser
 
-Coming soon...
+#### CDN
+
+##### jsDelivr
+
+```
+https://cdn.jsdelivr.net/npm/slawn/dist/slawn.js
+```
+
+##### UNPKG
+
+```
+https://unpkg.com/slawn/dist/slawn.js
+```
+
+##### Minified version
+
+```
+https://cdn.jsdelivr.net/npm/slawn/dist/slawn.min.js
+```
+
+```
+https://unpkg.com/slawn/dist/slawn.min.js
+```
+
+#### Use like this
+
+```html
+<script type="module">
+  import Slawn from 'https://cdn.jsdelivr.net/npm/slawn/dist/slawn.js'
+  // your code...
+</script>
+```
 
 ### With Node.js
 
@@ -29,6 +60,13 @@ Coming soon...
 
 ```bash
 bin/islawn
+```
+
+#### ES6 import
+
+```js
+import Slawn from 'slawn'
+// your code...
 ```
 
 ## API documents
@@ -47,7 +85,7 @@ Will be generated to "docs/"
 Run the test
 
 ```
-npm run test
+npm test
 ```
 
 ## LICENSE
