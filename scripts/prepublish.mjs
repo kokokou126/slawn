@@ -28,9 +28,12 @@ shell
       shell.cat(`src/${f}.mjs`).toString()
     )
     if (!result.error) {
+      const outFileName = `${f}.min.js`
       shell.ShellString(result.code)
-        .to(`dist/${f}.min.mjs`) &&
-        shell.echo(chalk`{cyan.bold MINIFIED} src/${f}.mjs -> dist/${f}.min.mjs`)
+        .to(`dist/${outFileName}`)
+        && shell.echo(chalk`{cyan.bold MINIFIED} src/${f}.mjs -> dist/${outFileName}`)
+      shell.sed('-i', /\.mjs"/g, '.js"', `dist/${outFileName}`)
+        && shell.echo(chalk`{blue.bold PROCESSED} dist/${outFileName}`)
     } else {
       shell.echo(chalk`{red.bold ERROR} dist/${f}.mjs
       ${result.error}`)
