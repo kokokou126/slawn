@@ -29,8 +29,19 @@ shell
     )
     if (!result.error) {
       const outFileName = `${f}.min.js`
-      shell.ShellString(result.code)
+      shell.ShellString(`/**
+@file ${outFileName}
+@license\n`)
         .to(`dist/${outFileName}`)
+        && shell.cat('LICENSE')
+          .toEnd(`dist/${outFileName}`)
+        && shell.sed('-i', /^(?!\/\*\*$)/g, ' * ', `dist/${outFileName}`)
+        && shell.ShellString(' */\n')
+          .toEnd(`dist/${outFileName}`)
+        && shell.sed('-i', /\s*$/g, '', `dist/${outFileName}`)
+        && shell.echo(chalk`{yellow.bold INITIALIZED} dist/${outFileName}`)
+      shell.ShellString(result.code)
+        .toEnd(`dist/${outFileName}`)
         && shell.echo(chalk`{cyan.bold MINIFIED} src/${f}.mjs -> dist/${outFileName}`)
       shell.sed('-i', /\.mjs"/g, '.js"', `dist/${outFileName}`)
         && shell.echo(chalk`{blue.bold PROCESSED} dist/${outFileName}`)
