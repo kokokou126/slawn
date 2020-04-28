@@ -27,24 +27,29 @@ shell
     const result = UglifyES.minify(
       shell.cat(`src/${f}.mjs`).toString()
     )
+    const outFileName = `${f}.js`
+    shell.cp('-f', `src/${f}.mjs`, `dist/${outFileName}`)
+      && shell.echo(chalk`{green.bold COPIED} src/${f}.mjs -> dist/${outFileName}`)
+    shell.sed('-i', /\.mjs'/g, ".js'", `dist/${outFileName}`)
+      && shell.echo(chalk`{blue.bold PROCESSED} dist/${outFileName}`)
     if (!result.error) {
-      const outFileName = `${f}.min.js`
+      const outMinifiedFileName = `${f}.min.js`
       shell.ShellString(`/**
-@file ${outFileName}
+@file ${outMinifiedFileName}
 @license\n`)
-        .to(`dist/${outFileName}`)
+        .to(`dist/${outMinifiedFileName}`)
         && shell.cat('LICENSE')
-          .toEnd(`dist/${outFileName}`)
-        && shell.sed('-i', /^(?!\/\*\*$)/g, ' * ', `dist/${outFileName}`)
+          .toEnd(`dist/${outMinifiedFileName}`)
+        && shell.sed('-i', /^(?!\/\*\*$)/g, ' * ', `dist/${outMinifiedFileName}`)
         && shell.ShellString(' */\n')
-          .toEnd(`dist/${outFileName}`)
-        && shell.sed('-i', /\s*$/g, '', `dist/${outFileName}`)
-        && shell.echo(chalk`{yellow.bold INITIALIZED} dist/${outFileName}`)
+          .toEnd(`dist/${outMinifiedFileName}`)
+        && shell.sed('-i', /\s*$/g, '', `dist/${outMinifiedFileName}`)
+        && shell.echo(chalk`{yellow.bold INITIALIZED} dist/${outMinifiedFileName}`)
       shell.ShellString(result.code)
-        .toEnd(`dist/${outFileName}`)
-        && shell.echo(chalk`{cyan.bold MINIFIED} src/${f}.mjs -> dist/${outFileName}`)
-      shell.sed('-i', /\.mjs"/g, '.min.js"', `dist/${outFileName}`)
-        && shell.echo(chalk`{blue.bold PROCESSED} dist/${outFileName}`)
+        .toEnd(`dist/${outMinifiedFileName}`)
+        && shell.echo(chalk`{cyan.bold MINIFIED} src/${f}.mjs -> dist/${outMinifiedFileName}`)
+      shell.sed('-i', /\.mjs"/g, '.min.js"', `dist/${outMinifiedFileName}`)
+        && shell.echo(chalk`{blue.bold PROCESSED} dist/${outMinifiedFileName}`)
     } else {
       shell.echo(chalk`{red.bold ERROR} dist/${f}.mjs
       ${result.error}`)
