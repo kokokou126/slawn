@@ -8,6 +8,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 shell.cd(`${__dirname}/..`)
 
+const ignores = shell.cat('scripts/.minifyignore').toString().split('\n')
+
 shell
   .find('src')
   .filter(d => shell.test('-d', d) && !d.match(/^src$/))
@@ -24,6 +26,9 @@ shell
     .replace(/.mjs$/, '')
   )
   .forEach(f => {
+    if (ignores.includes(`${f}.mjs`)) {
+      return
+    }
     const result = UglifyES.minify(
       shell.cat(`src/${f}.mjs`).toString()
     )

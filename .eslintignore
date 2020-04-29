@@ -1,2 +1,2 @@
 scripts/test.mjs
-scripts/prepublish.mjs
+scripts/minify.mjs
