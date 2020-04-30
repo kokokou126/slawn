@@ -10,7 +10,7 @@
  * Object オペレータ
  * @operator
  */
-const objectOperator = {
+const ObjectOperator = {
   arg: 0,
   /**
    * Object を返します
@@ -19,4 +19,4 @@ const objectOperator = {
   body: () => {}
 }
 
-export default objectOperator
+export default ObjectOperator
