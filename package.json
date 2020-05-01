@@ -4,12 +4,14 @@
   "description": "A programming language made with JavaScript",
   "main": "src/slawn.mjs",
   "scripts": {
+    "addOperatorInfo": "node --experimental-modules scripts/addOperatorInfo.mjs",
     "clean": "rm -rf ./docs/ ./dist/",
     "doc": "jsdoc -c ./jsdoc.json",
     "lint": "eslint --ext js,mjs src/",
     "minify": "node --experimental-modules scripts/minify.mjs",
     "prepublish": "npm run minify",
-    "test": "node --experimental-modules scripts/test.mjs"
+    "test": "node --experimental-modules scripts/test.mjs",
+    "yml2json": "node --experimental-modules scripts/yml2json.mjs"
   },
   "repository": {
     "type": "git",
@@ -29,8 +31,11 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "inquirer": "^7.1.0",
+    "js-yaml": "^3.13.1",
     "jsdoc": "^3.6.4",
     "shelljs": "^0.8.3",
     "uglify-es": "^3.3.9"
-  }
+  },
+  "dependencies": {}
 }

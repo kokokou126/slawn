@@ -1,0 +1,350 @@
+-
+  name: 'true'
+  alias: [$true]
+  groups: [engine]
+  description: true を返します
+  arg: 0
+  depends: []
+-
+  name: 'false'
+  alias: [$false]
+  groups: [engine]
+  description: false を返します
+  arg: 0
+  depends: []
+-
+  name: 'null'
+  alias: [$null]
+  groups: [engine]
+  description: null を返します
+  arg: 0
+  depends: []
+-
+  name: undefined
+  alias: [$undefined]
+  groups: [engine]
+  description: undefined を返します
+  arg: 0
+  depends: []
+-
+  name: NaN
+  alias: [$NaN]
+  groups: [engine]
+  description: NaN を返します
+  arg: 0
+  depends: []
+-
+  name: Infinity
+  alias: [$Infinity]
+  groups: [engine]
+  description: Infinity を返します
+  arg: 0
+  depends: []
+-
+  name: Array
+  alias: ['[]']
+  groups: [engine]
+  description: 配列を返します
+  arg: 0
+  depends: []
+-
+  name: Object
+  alias: ['{}']
+  groups: [engine]
+  description: Object を返します
+  arg: 0
+  depends: []
+-
+  name: set
+  alias: ['!set']
+  groups: [engine]
+  description: 名前空間にキーを指定して値を代入します
+  arg: 2
+  depends: []
+-
+  name: addAssign
+  alias: [+=]
+  groups: [engine]
+  description: 名前空間から指定したキーの値に値を加え、その結果を代入します
+  arg: 2
+  depends: []
+-
+  name: subtractAssign
+  alias: [-=]
+  groups: [engine]
+  description: 名前空間から指定したキーの値の数値を減らし、その結果を代入します
+  arg: 2
+  depends: []
+-
+  name: multiplyAssign
+  alias: ['*=']
+  groups: [engine]
+  description: 名前空間から指定したキーの値の数値で乗算を行い、その結果を代入します
+  arg: 2
+  depends: []
+-
+  name: divideAssign
+  alias: [/=]
+  groups: [engine]
+  description: 名前空間から指定したキーの値の数値で除算を行い、その結果を代入します
+  arg: 2
+  depends: []
+-
+  name: modAssign
+  alias: ["%="]
+  groups: [engine]
+  description: 名前空間から指定したキーの値の数値で除算を行い、剰余を代入します
+  arg: 2
+  depends: []
+-
+  name: powerAssign
+  alias: ['**=']
+  groups: [engine]
+  description: 名前空間から指定したキーの値の数値でべき乗を行い、その結果を代入します
+  arg: 2
+  depends: []
+-
+  name: get
+  alias: [$]
+  groups: [engine]
+  description: 名前空間から指定したキーの値を返します
+  arg: 1
+  depends: []
+-
+  name: delete
+  alias: ['!delete']
+  groups: [engine]
+  description: 名前空間からキーと値のペアを削除します
+  arg: 1
+  depends: []
+-
+  name: eval
+  alias: ['!eval']
+  groups: [engine]
+  description: 渡された Slawn 式を評価します
+  arg: 1
+  depends: []
+-
+  name: if
+  alias: ['!if']
+  groups: [engine]
+  description: 条件式が true の場合、then 節を評価します。さもなくば、else 節を評価します。
+  arg: 3
+  depends: []
+-
+  name: unless
+  alias: ['!unless']
+  groups: [engine]
+  description: 条件式が false の場合、then 節を評価します。さもなくば、else 節を評価します。
+  arg: 3
+  depends: []
+-
+  name: each
+  alias: ['!each']
+  groups: [engine]
+  description: 配列に対して反復処理を行います。指定した変数に配列の値を代入します。
+  arg: 3
+  depends: []
+-
+  name: while
+  alias: ['!while']
+  groups: [engine]
+  description: 条件式が true の間、Slawn 式を評価し続けます
+  arg: 2
+  depends: []
+-
+  name: until
+  alias: ['!until']
+  groups: [engine]
+  description: 条件式が false の間、Slawn 式を評価し続けます
+  arg: 2
+  depends: []
+-
+  name: times
+  alias: ['!times']
+  groups: [engine]
+  description: 指定した回数、Slawn 式を評価します
+  arg: 2
+  depends: []
+-
+  name: push
+  alias: ['!push']
+  groups: [engine, array]
+  description: 配列を指定し、指定した値を末尾に追加します
+  arg: 2
+  depends: []
+-
+  name: add
+  alias: [+]
+  groups: [slawn]
+  description: 加算を行い結果を返します
+  arg: 2
+  depends: []
+-
+  name: subtract
+  alias: ['-']
+  groups: [slawn]
+  description: 減算した結果を返します
+  arg: 2
+  depends: []
+-
+  name: multiply
+  alias: ['*']
+  groups: [slawn]
+  description: 乗算した結果を返します
+  arg: 2
+  depends: []
+-
+  name: divide
+  alias: [/]
+  groups: [slawn]
+  description: 除算を行い結果を返します
+  arg: 2
+  depends: []
+-
+  name: mod
+  alias: ['%']
+  groups: [slawn]
+  description: 除算を行い、剰余を返します
+  arg: 2
+  depends: []
+-
+  name: power
+  alias: ['**']
+  groups: [slawn]
+  description: べき乗した結果を返します
+  arg: 2
+  depends: []
+-
+  name: not
+  alias: ['!']
+  groups: [slawn]
+  description: 真偽値を反転した値を返します
+  arg: 1
+  depends: []
+-
+  name: toBoolean
+  alias: ['!!']
+  groups: [slawn]
+  description: 真偽値に変換します
+  arg: 1
+  depends: []
+-
+  name: and
+  alias: ['&&']
+  groups: [slawn]
+  description: 左辺を評価し、true ならば右辺を、false ならば左辺を返します
+  arg: 2
+  depends: []
+-
+  name: or
+  alias: ['||']
+  groups: [slawn]
+  description: 左辺を評価し、false ならば右辺を、true ならば左辺を返します
+  arg: 2
+  depends: []
+-
+  name: equal
+  alias: [==]
+  groups: [slawn]
+  description: 等しければ true を、そうでなければ、false を返します
+  arg: 2
+  depends: []
+-
+  name: notEqual
+  alias: ['!=']
+  groups: [slawn]
+  description: 等しくなければ true を、等しければ、false を返します
+  arg: 2
+  depends: []
+-
+  name: greater
+  alias: ['>']
+  groups: [slawn]
+  description: 左辺と右辺を比較して、左辺が右辺を超えたら true を、そうでなければ false を返します
+  arg: 2
+  depends: []
+-
+  name: less
+  alias: [<]
+  groups: [slawn]
+  description: 左辺と右辺を比較して、左辺が右辺未満ならば true を、そうでなければ false を返します
+  arg: 2
+  depends: []
+-
+  name: greaterEqual
+  alias: ['>=']
+  groups: [slawn]
+  description: 左辺と右辺を比較して、左辺が右辺以上ならば true を、そうでなければ false を返します
+  arg: 2
+  depends: []
+-
+  name: lessEqual
+  alias: [<=]
+  groups: [slawn]
+  description: 左辺と右辺を比較して、左辺が右辺以下ならば true を、そうでなければ false を返します
+  arg: 2
+  depends: []
+-
+  name: range
+  alias: ['!range']
+  groups: [slawn, array]
+  description: 連番の数列を返します
+  arg: 2
+  depends: []
+-
+  name: toJSON
+  alias: ['!toJSON']
+  groups: [slawn]
+  description: JSON に変換します
+  arg: 1
+  depends: []
+-
+  name: toNumber
+  alias: ['!toNumber']
+  groups: [slawn]
+  description: 数値に変換します
+  arg: 1
+  depends: []
+-
+  name: toArray
+  alias: ['!toArray']
+  groups: [slawn]
+  description: 配列に変換します
+  arg: 1
+  depends: []
+-
+  name: sort
+  alias: ['!sort']
+  groups: [slawn, array]
+  description: 配列の値をソートした結果を返します
+  arg: 1
+  depends: []
+-
+  name: reverse
+  alias: ['!reverse']
+  groups: [slawn, array]
+  description: 配列を反転した結果を返します
+  arg: 1
+  depends: []
+-
+  name: summary
+  alias: ['!summary']
+  groups: [slawn, array]
+  description: 数列の合計を返します
+  arg: 1
+  depends: []
+-
+  name: average
+  alias: ['!average']
+  groups: [slawn, array]
+  description: 数列の平均を返します
+  arg: 1
+  depends: []
+-
+  name: print
+  alias: ['!print']
+  groups: [slawn, console]
+  description: コンソールに値を出力します
+  arg: 1
+  depends: []

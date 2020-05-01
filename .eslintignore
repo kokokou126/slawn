@@ -1,2 +1,4 @@
+scripts/addOperatorInfo.mjs
 scripts/test.mjs
 scripts/minify.mjs
+scripts/yml2json.mjs
