@@ -50,6 +50,7 @@ https://unpkg.com/slawn/dist/slawn.min.js
 ```html
 <script type="module">
   import Slawn from 'https://cdn.jsdelivr.net/npm/slawn/dist/slawn.js'
+  const Slawn = new Slawn()
   // your code...
 </script>
 ```
@@ -66,6 +67,7 @@ bin/islawn
 
 ```js
 import Slawn from 'slawn'
+const Slawn = new Slawn()
 // your code...
 ```
 
