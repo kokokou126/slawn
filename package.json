@@ -9,7 +9,7 @@
     "doc": "jsdoc -c ./jsdoc.json",
     "lint": "eslint --ext js,mjs src/",
     "minify": "node --experimental-modules scripts/minify.mjs",
-    "prepublish": "npm run minify",
+    "prepare": "run-s minify yml2json",
     "test": "node --experimental-modules scripts/test.mjs",
     "yml2json": "node --experimental-modules scripts/yml2json.mjs"
   },
@@ -34,6 +34,7 @@
     "inquirer": "^7.1.0",
     "js-yaml": "^3.13.1",
     "jsdoc": "^3.6.4",
+    "npm-run-all": "^4.1.5",
     "shelljs": "^0.8.3",
     "uglify-es": "^3.3.9"
   },
