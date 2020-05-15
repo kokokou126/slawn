@@ -1,4 +1,4 @@
-# slawn
+# Slawn
 
 [![GitHub](https://img.shields.io/badge/GitHub-kokokou126/slawn-181717?logo=GitHub&style=flat-square)](https://github.com/kokokou126/slawn)
 [![Netlify](https://img.shields.io/badge/Netlify-slawn--docs-00c7b7?logo=Netlify&style=flat-square)](https://slawn-docs.netlify.app)
@@ -19,23 +19,29 @@ A programming language made with JavaScript
 
 ## Try
 
-### With browser
+[Graphical Slawn](https://graphical-slawn.netlify.app)
 
-#### CDN
+## Development
 
-##### jsDelivr
+### How to use
+
+#### With browser
+
+##### CDN
+
+###### jsDelivr
 
 ```
 https://cdn.jsdelivr.net/npm/slawn/dist/slawn.js
 ```
 
-##### UNPKG
+###### UNPKG
 
 ```
 https://unpkg.com/slawn/dist/slawn.js
 ```
 
-##### Minified version
+###### Minified version
 
 ```
 https://cdn.jsdelivr.net/npm/slawn/dist/slawn.min.js
@@ -45,36 +51,38 @@ https://cdn.jsdelivr.net/npm/slawn/dist/slawn.min.js
 https://unpkg.com/slawn/dist/slawn.min.js
 ```
 
-#### Use like this
+##### Use like this
 
 ```html
 <script type="module">
   import Slawn from 'https://cdn.jsdelivr.net/npm/slawn/dist/slawn.js'
+
   const Slawn = new Slawn()
   // your code...
 </script>
 ```
 
-### With Node.js
+#### With Node.js
 
-#### Interactive mode
+##### Interactive mode
 
 ```bash
 bin/islawn
 ```
 
-#### ES6 import
+##### ES6 import
 
 ```js
 import Slawn from 'slawn'
+
 const Slawn = new Slawn()
 // your code...
 ```
 
-## API documents
+### API documents
 [slawn-docs.netlify.app](https://slawn-docs.netlify.app)
 
-### Generating API documents
+#### Generating API documents
 
 ```bash
 npm run doc
@@ -82,9 +90,7 @@ npm run doc
 
 Will be generated to "docs/"
 
-## Development
-
-Run the test
+### Run the test
 
 ```
 npm test
