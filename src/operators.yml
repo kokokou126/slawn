@@ -56,7 +56,7 @@
   depends: []
 -
   name: set
-  alias: ['!set']
+  alias: [=]
   groups: [engine]
   description: 名前空間にキーを指定して値を代入します
   arg: 2
